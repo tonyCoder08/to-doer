@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TextInput, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, Keyboard } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { useEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -43,6 +43,7 @@ export default function TODOInput({ navigation, route }) {
     const list = storage
     list.push(data)
     saveToStorage(list)
+    Keyboard.dismiss()
     navigation.goBack()
 
   }
