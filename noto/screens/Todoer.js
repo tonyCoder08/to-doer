@@ -8,6 +8,7 @@ import {
   TextInput,
   TouchableOpacity,
   Vibration,
+  StatusBar,
 } from "react-native";
 import TODO from "../components/TODO";
 import { useIsFocused } from "@react-navigation/native";
@@ -55,6 +56,7 @@ export default function Todoer({navigation}) {
   };
   return (
     <View style={styles.container}>
+      <StatusBar backgroundColor={getTrackColor()} barStyle={"dark-content"} />
       <View style={styles.homeContainer}>
         {/* Header */}
         {/* <View style={styles.searchContainer}>
