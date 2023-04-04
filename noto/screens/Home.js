@@ -73,7 +73,7 @@ export default function Home({ navigation, route }) {
   // delete Button bulk selection
   const handleDeleteButton = () => {
     let selected = selectedItems;
-    let list = Notes;
+    let list = notes;
     list = list.filter((item) => !selected.includes(item.id));
     storeData(list);
     getData();
@@ -433,6 +433,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     textAlign: "center",
     color: "#687076",
+    marginTop:20
   },
   buttonExample: {
     backgroundColor: "#DFE3E6",
