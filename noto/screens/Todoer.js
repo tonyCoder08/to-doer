@@ -136,7 +136,7 @@ export default function Todoer({navigation}) {
             if (item.state == track) {
               return (
                 <TODO
-                  key={item.key}
+                  key={item.id}
                   id={item.id}
                   title={item.title}
                   text={item.text}

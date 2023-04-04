@@ -112,8 +112,6 @@ export default function TODOInput({ navigation, route }) {
           ></TextInput>
         </View>
       </View>
-      {/* state */}
-      <Text>TODO</Text>
     </View>
   );
 }
@@ -156,7 +154,6 @@ const styles = StyleSheet.create({
     borderRadius: 11,
     borderWidth: 1,
     borderColor: "#DFE3E6",
-    marginBottom: 10,
   },
   inputTitle: {
     fontFamily: "Inter_400Regular",

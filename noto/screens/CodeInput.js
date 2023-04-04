@@ -189,7 +189,6 @@ const styles = StyleSheet.create({
         borderRadius: 11,
         borderWidth: 1,
         borderColor: "#DFE3E6",
-        marginBottom: 10,
     },
     inputCodeLanguage: {
         fontFamily: "Inter_400Regular",

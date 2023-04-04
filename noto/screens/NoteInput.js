@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: "#FBFCFD",
         width: "100%",
-        padding: 15,
+        padding: 10,
         paddingTop: 10,
     },
     headerContainer: {
@@ -184,7 +184,6 @@ const styles = StyleSheet.create({
         borderRadius: 11,
         borderWidth: 1,
         borderColor: "#DFE3E6",
-        marginBottom: 10,
     },
     inputTitle: {
         fontFamily: "Inter_400Regular",
