@@ -187,34 +187,31 @@ export default function TODOconfig({ navigation, route }) {
             styles.NewCodeContainer,
             {
               backgroundColor: theme == "light" ? "white" : "#3A3E4E",
-              borderColor: getNewBarTextColor(),
             },
           ]}
         >
           {/* ask for which language */}
           {/* title */}
           <TextInput
-            style={[styles.inputCodeTitle, { color: getNewBarTextColor() }]}
-            placeholder="TODO Title"
+            style={[styles.inputCodeTitle]}
+            placeholder={`${track.toUpperCase()} Title`}
             multiline={true}
             numberOfLines={2}
             textAlignVertical="top"
             maxLength={100}
             onChangeText={setTitle}
             value={title}
-            placeholderTextColor={getNewBarTextColor()}
           ></TextInput>
 
           {/* text */}
           <TextInput
-            style={[styles.inputCode, { color: getNewBarTextColor() }]}
-            placeholder="TODO info (option)"
+            style={[styles.inputCode]}
+            placeholder={`${track.toUpperCase()} Info`}
             multiline={true}
             numberOfLines={11}
             textAlignVertical="top"
             onChangeText={setText}
             value={text}
-            placeholderTextColor={getNewBarTextColor()}
           ></TextInput>
         </View>
       </View>
@@ -269,7 +266,6 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
     alignContent: "flex-start",
     marginBottom: 10,
-    color: "white",
   },
   inputCodeTitle: {
     fontFamily: "Inter_400Regular",
@@ -278,7 +274,6 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
     alignContent: "flex-start",
     marginBottom: 20,
-    color: "white",
   },
   inputCode: {
     fontFamily: "Inter_400Regular",
@@ -310,5 +305,7 @@ const styles = StyleSheet.create({
   },
   stateItemText: {
     fontSize: 15,
+    fontFamily: "Inter_500Medium",
+
   },
 });
