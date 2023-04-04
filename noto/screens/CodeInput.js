@@ -23,9 +23,9 @@ const CodeInput = ({ navigation }) => {
 
     const saveCodeToStorage = async () => {
         let codeStructure = {
+            id: id,
             title: title,
             code: code,
-            id: id,
             language: language || "unknown",
         };
         let data = storage;

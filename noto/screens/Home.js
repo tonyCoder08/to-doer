@@ -15,6 +15,7 @@ import { EvilIcons, Ionicons } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useIsFocused } from "@react-navigation/native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { globalstyles } from "../global/styles";
 export default function Home({ navigation, route }) {
   const [notes, setNotes] = useState([]);
   const [pinnedItems, setPinnedItems] = useState([]);
@@ -254,7 +255,7 @@ export default function Home({ navigation, route }) {
         <ScrollView showsVerticalScrollIndicator={false}>
           {/* Message info */}
           {notes.length == 0 && pinnedItems.length == 0 && (
-            <Text style={styles.infoText}>
+            <Text style={globalstyles.infoText}>
               Your list is currently empty! {"\n"}
             </Text>
           )}

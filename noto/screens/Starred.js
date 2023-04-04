@@ -9,6 +9,7 @@ import {
 import { AntDesign } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import Note from "../components/Note";
+import { globalstyles } from "../global/styles";
 export default function Starred({ navigation }) {
     const [isStarred, setIsStarred] = useState(false);
     const [list, setList] = useState([]);
@@ -68,7 +69,7 @@ export default function Starred({ navigation }) {
                 </View>
                 <ScrollView style={styles.notoContainer}>
                     {list.length == 0 && (
-                        <Text style={styles.infoText}>
+                        <Text style={globalstyles.infoText}>
                             You haven't starred any tasks yet.
                         </Text>
                     )}

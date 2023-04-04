@@ -10,6 +10,7 @@ import { useState, useEffect } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useIsFocused } from "@react-navigation/native";
 import Code from "../components/Code";
+import { globalstyles } from "../global/styles";
 export default function Codes({ navigation }) {
     const [codes, setCodes] = useState([]);
     const [languages, setLanguages] = useState([
@@ -31,6 +32,7 @@ export default function Codes({ navigation }) {
             const data = JSON.parse(datalist) || [];
             const codeslist = data;
             setCodes(codeslist);
+            console.log(codeslist)
         } catch (e) {
             // showing error
         }
@@ -85,7 +87,7 @@ export default function Codes({ navigation }) {
 
                     {
                         codes.length == 0 && (
-                            <Text style={styles.infoText}>
+                            <Text style={globalstyles.infoText}>
                                 No Codes Saved!
                             </Text>
                         )
@@ -199,13 +201,5 @@ const styles = StyleSheet.create({
         color: "#687076",
         fontWeight: "medium",
         fontFamily: "Inter_400Regular",
-    },
-    infoText: {
-        fontFamily: "Inter_400Regular",
-        fontSize: 18,
-        alignSelf: "center",
-        justifyContent: "center",
-        textAlign: "center",
-        color:"#687076"
-      },
+    }
 });
